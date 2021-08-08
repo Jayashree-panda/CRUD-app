@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>My nodejs application.</h1>
+    <form action='/quote' method="POST">
+        <input type="text" placeholder="name" name="name">
+        <input type="text" placeholder="quote" name="quote">
+        <button>Submit</button>
+        <% for(var i=0; i<quotes.length; i++) { %>
+            <li class="quote">
+                <span><%= quotes[i].name %></span>
+                <span><%= quotes[i].quote %></span>
+            </li>
+        <% } %>
+    </form>
+    <h2>Update operation</h2>
+    <div>
+        <h2>Darth Vadar invades!</h2>
+        <p>
+          Replace first Yoda's quote with a quote written by Darth Vadar
+        </p>
+        <button id="update-button">Replace Yoda's quote</button>
+      </div>
+    <h2>Delete operation</h2>
+    <div>
+        <h2>Darth Vadar invades!</h2>
+        <p>
+        Delete first Yoda's quote with a quote written by Darth Vadar
+        </p>
+        <button id="delete-button">Delete Yoda's quote</button>
+        <div id="message"></div>
+    </div>
+      <script src="/main.js"></script>
+</body>
+</html>
